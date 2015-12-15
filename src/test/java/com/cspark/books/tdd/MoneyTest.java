@@ -51,7 +51,7 @@ public class MoneyTest {
     }
 
     @Test
-    public void testPlusRetrunSum() throws Exception {
+    public void testPlusReturnSum() throws Exception {
         Money five = Money.dollar(5);
         Expression result = five.plus(five);
         Sum sum = (Sum) result;
