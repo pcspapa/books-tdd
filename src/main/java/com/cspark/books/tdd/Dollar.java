@@ -7,7 +7,7 @@ public class Dollar extends Money {
 
     public Dollar(int amount, String currency) {
         this.amount = amount;
-        this.currency = "USD";
+        this.currency = currency;
     }
 
     public Money times(int multiplier) {
