@@ -9,14 +9,22 @@ import static org.junit.Assert.assertTrue;
 /**
  * Created by cspark on 2015. 12. 15..
  */
-public class DollarTest {
+public class MoneyTest {
 
     @Test
-    public void testMuliplication() throws Exception {
+    public void testDollarMuliplication() throws Exception {
         Dollar five = new Dollar(5);
 
         assertEquals(new Dollar(10), five.times(2));
         assertEquals(new Dollar(15), five.times(3));
+    }
+
+    @Test
+    public void testFrancMuliplication() throws Exception {
+        Franc five = new Franc(5);
+
+        assertEquals(new Franc(10), five.times(2));
+        assertEquals(new Franc(15), five.times(3));
     }
 
     @Test
