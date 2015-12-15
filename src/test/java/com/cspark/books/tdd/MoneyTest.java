@@ -1,6 +1,7 @@
 package com.cspark.books.tdd;
 
 import org.junit.Test;
+import org.junit.experimental.categories.ExcludeCategories;
 
 import static org.junit.Assert.*;
 
@@ -46,6 +47,16 @@ public class MoneyTest {
         Bank bank = new Bank();
         Money reduced = bank.reduce(sum, "USD");
         assertEquals(Money.dollar(10), reduced);
+
+    }
+
+    @Test
+    public void testPlusRetrunSum() throws Exception {
+        Money five = Money.dollar(5);
+        Expression result = five.plus(five);
+        Sum sum = (Sum) result;
+        assertEquals(five, sum.augend);
+        assertEquals(five, sum.addend);
 
     }
 }
