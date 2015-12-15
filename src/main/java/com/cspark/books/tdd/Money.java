@@ -3,7 +3,7 @@ package com.cspark.books.tdd;
 /**
  * Created by cspark on 2015. 12. 15..
  */
-public abstract class Money {
+public class Money {
     protected int amount;
     protected String currency;
 
@@ -24,11 +24,21 @@ public abstract class Money {
         return currency;
     }
 
-    public abstract Money times(int amount);
+    public Money times(int amount) {
+        return null;
+    }
 
     @Override
     public boolean equals(Object o) {
         Money money = (Money) o;
         return amount == money.amount && getClass().equals(money.getClass());
+    }
+
+    @Override
+    public String toString() {
+        return "Money{" +
+                "amount=" + amount +
+                ", currency='" + currency + '\'' +
+                '}';
     }
 }
