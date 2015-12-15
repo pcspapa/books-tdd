@@ -16,6 +16,8 @@ public abstract class Money {
 
     public abstract Money times(int amount);
 
+    public abstract String currency();
+
     @Override
     public boolean equals(Object o) {
         Money money = (Money) o;
