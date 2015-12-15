@@ -24,8 +24,8 @@ public class Money {
         return currency;
     }
 
-    public Money times(int amount) {
-        return null;
+    public Money times(int multiplier) {
+        return new Money(amount * multiplier, currency);
     }
 
     @Override
