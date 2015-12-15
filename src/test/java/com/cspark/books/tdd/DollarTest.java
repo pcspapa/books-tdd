@@ -10,7 +10,7 @@ import static org.junit.Assert.assertEquals;
 public class DollarTest {
 
     @Test
-    public void testNothing() throws Exception {
+    public void testMuliplication() throws Exception {
         Dollar five = new Dollar(5);
         five.times(2);
         assertEquals(10, five.amount);
