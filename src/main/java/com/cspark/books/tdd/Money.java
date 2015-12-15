@@ -5,6 +5,7 @@ package com.cspark.books.tdd;
  */
 public abstract class Money {
     protected int amount;
+    protected String currency;
 
     static Money dollar(int amount) {
         return new Dollar(amount);
@@ -14,9 +15,11 @@ public abstract class Money {
         return new Franc(amount);
     }
 
-    public abstract Money times(int amount);
+    public String currency() {
+        return currency;
+    }
 
-    public abstract String currency();
+    public abstract Money times(int amount);
 
     @Override
     public boolean equals(Object o) {
