@@ -3,6 +3,7 @@ package com.cspark.books.tdd;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 /**
  * Created by cspark on 2015. 12. 15..
@@ -16,6 +17,11 @@ public class DollarTest {
         assertEquals(10, product.amount);
         product = five.times(3);
         assertEquals(15, product.amount);
+    }
+
+    @Test
+    public void testEquality() throws Exception {
+        assertTrue(new Dollar(5).equals(new Dollar(5)));
     }
 
 }
