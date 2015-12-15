@@ -3,7 +3,7 @@ package com.cspark.books.tdd;
 /**
  * Created by cspark on 2015. 12. 15..
  */
-public class Franc {
+public class Franc extends Money {
     public int amount;
 
     public Franc(int amount) {
