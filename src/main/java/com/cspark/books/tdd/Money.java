@@ -3,7 +3,7 @@ package com.cspark.books.tdd;
 /**
  * Created by cspark on 2015. 12. 15..
  */
-public class Money {
+public class Money implements Expression {
     protected int amount;
     protected String currency;
 
@@ -28,6 +28,10 @@ public class Money {
         return new Money(amount * multiplier, currency);
     }
 
+    public Expression plus(Money addend) {
+        return new Money(amount + addend.amount, currency);
+    }
+
     @Override
     public boolean equals(Object o) {
         Money money = (Money) o;
@@ -40,9 +44,5 @@ public class Money {
                 "amount=" + amount +
                 ", currency='" + currency + '\'' +
                 '}';
-    }
-
-    public Money plus(Money addend) {
-        return new Money(amount + addend.amount, currency);
     }
 }
